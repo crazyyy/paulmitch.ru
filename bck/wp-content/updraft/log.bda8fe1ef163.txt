@@ -1,0 +1,223 @@
+0000.001 (0) Opened log file at time: Mon, 10 Mar 2014 09:28:49 +0000 on http://paulmitch.ru
+0000.002 (0) UpdraftPlus WordPress backup plugin (http://updraftplus.com): 1.8.12 WP: 3.8.1 PHP: 5.2.17 (Linux axra.beget.ru 3.0.101-5-beget-acl #1 SMP Mon Jan 27 12:15:40 MSK 2014 x86_64) MySQL: 5.1.70-beget-log Server: Apache/2.2.25-3-beget (Unix) safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 11.7M | 12.3M) multisite: N mcrypt: Y ZipArchive::addFile: Y W3TC/ObjectCache: N
+0000.003 (0) Free space on disk containing Updraft's temporary directory: 120633.6 Mb
+0000.005 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.009 (0) Requesting semaphore lock (fd)
+0000.010 (0) Set semaphore last lock (fd) time to 2014-03-10 09:28:49
+0000.011 (0) Semaphore lock (fd) complete
+0000.016 (0) Backup run: resumption=0, nonce=bda8fe1ef163, begun at=1394443729 (0s ago), job type=backup
+0000.017 (0) Scheduling a resumption (1) after 300 seconds (1394444029) in case this run gets aborted
+0000.037 (0) Checking if we have a zip executable available
+0000.038 (0) Testing: /usr/bin/zip
+0000.050 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.051 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.052 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.052 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=127) (out=105) (deflated 17%)
+0000.053 (0) Output: total bytes=127, compressed=105 -> 17% savings
+0000.066 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=134) (out=109) (deflated 19%)
+0000.067 (0) Output: total bytes=261, compressed=214 -> 18% savings
+0000.069 (0) Working binary zip found: /usr/bin/zip
+0000.070 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.071 (0) Creation of backups of directories: beginning
+0000.073 (0) Beginning creation of dump of plugins (split every: 800 Mb)
+0000.098 (0) Total entities for the zip file: 117 directories, 829 files, 12.2 Mb
+0000.105 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0000.111 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0000.117 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0000.123 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0000.129 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0000.130 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.7 Mb, 829 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0000.560 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: size is now: 2.30 Mb
+0000.565 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 600 files added (on-disk size: 2354.7 Kb)
+0000.569 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 700 files added (on-disk size: 2354.7 Kb)
+0000.572 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: 800 files added (on-disk size: 2354.7 Kb)
+0000.898 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip.tmp: size is now: 6.10 Mb
+0000.933 (0) Created plugins zip (0) - 6288.6 Kb in 0.9 s (7323.4 Kb/s) (SHA1 checksum: a19279ec3c37250cc7de52328ce1777e188af616)
+0000.934 (0) Beginning creation of dump of themes (split every: 800 Mb)
+0000.958 (0) Total entities for the zip file: 120 directories, 819 files, 10.1 Mb
+0000.962 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0000.965 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0000.969 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0000.972 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0000.976 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0000.976 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (6.1 Mb, 819 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0001.343 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: size is now: 3.80 Mb
+0001.349 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 600 files added (on-disk size: 3883.7 Kb)
+0001.352 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 700 files added (on-disk size: 3883.7 Kb)
+0001.356 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: 800 files added (on-disk size: 3883.7 Kb)
+0001.589 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip.tmp: size is now: 6.00 Mb
+0001.623 (0) Created themes zip (0) - 6145.8 Kb in 0.7 s (8938.2 Kb/s) (SHA1 checksum: e3c862e188f96ff6314ab976edfc23647e63c70d)
+0001.626 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0001.626 (0) Looking for candidates to back up in: /home/g/gene00/paulmitch.ru/public_html/wp-content/uploads
+0001.627 (0) finding files: 2014: adding to list (1)
+0001.628 (0) finding files: snapshot-20140310-859.tar: adding to list (2)
+0001.629 (0) Beginning creation of dump of uploads (split every: 800 Mb)
+0001.642 (0) Total entities for the zip file: 3 directories, 679 files, 75 Mb
+0001.645 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: 100 files added (on-disk size: 0 Kb)
+0001.649 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: 200 files added (on-disk size: 0 Kb)
+0001.652 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: 300 files added (on-disk size: 0 Kb)
+0001.656 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: 400 files added (on-disk size: 0 Kb)
+0001.660 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: 500 files added (on-disk size: 0 Kb)
+0001.660 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 500 files added on this batch (15.1 Mb, 679 files batched, 501 (501) added so far); re-opening (prior size: 0 Kb)
+0002.481 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: size is now: 14.40 Mb
+0002.487 (0) Zip: backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: 600 files added (on-disk size: 14763.7 Kb)
+0002.490 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 Mb added on this batch (59.9 Mb, 679 files batched, 178 (679) added so far); re-opening (prior size: 14763.7 Kb)
+0005.866 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip.tmp: size is now: 51.50 Mb
+0005.868 (0) A useful amount of data was added after this amount of zip processing: 3.7 s (normalised: 1.6 s, rate: 16494.4 Kb/s)
+0005.869 (0) Performance is good - will increase the amount of data we attempt to batch (time=3.7206799984, normalised_time=1.55204354466, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=101341486)
+0006.130 (0) Created uploads zip (0) - 52765.8 Kb in 4.5 s (11724.6 Kb/s) (SHA1 checksum: 205fdfd43bbfba86bc7e778e47d00d28e950117d)
+0006.132 (0) Beginning backup of other directories found in the content directory (index: 0)
+0006.133 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups
+0006.134 (0) Looking for candidates to back up in: /home/g/gene00/paulmitch.ru/public_html/wp-content
+0006.134 (0) finding files: updraft: skipping: this is the updraft directory
+0006.135 (0) finding files: uploads: skipping: this is the uploads directory
+0006.136 (0) finding files: index.php: adding to list (1)
+0006.136 (0) finding files: backups: skipping: excluded by options (glob)
+0006.137 (0) finding files: backups: skipping: excluded by options (glob)
+0006.137 (0) finding files: plugins: skipping: this is the plugins directory
+0006.138 (0) finding files: languages: adding to list (2)
+0006.138 (0) finding files: upgrade: skipping: excluded by options
+0006.139 (0) finding files: themes: skipping: this is the themes directory
+0006.141 (0) Total entities for the zip file: 2 directories, 16 files, 1.7 Mb
+0006.276 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-others.zip.tmp: size is now: 0.50 Mb
+0006.282 (0) Created others zip (0) - 470.9 Kb in 0.1 s (3315.4 Kb/s) (SHA1 checksum: b4ce2caf1819bfcbd45ec73f7f033eddd9198e64)
+0006.285 (0) Saving backup status to database (elements: 8)
+0006.286 (0) Beginning creation of database dump
+0006.288 (0) Testing: /usr/bin/mysqldump
+0006.315 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0006.321 (0) Table wp_options: Total expected rows (approximate): 202
+0006.354 (0) Table wp_options: Total rows added: 201 in 0.03 seconds
+0006.356 (0) Table wp_options: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_options.table.gz - 64 Kb)
+0006.358 (0) Table wp_users: Total expected rows (approximate): 1
+0006.363 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0006.363 (0) Table wp_users: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_users.table.gz - 0 Kb)
+0006.366 (0) Table wp_usermeta: Total expected rows (approximate): 19
+0006.369 (0) Table wp_usermeta: Total rows added: 19 in 0.00 seconds
+0006.370 (0) Table wp_usermeta: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_usermeta.table.gz - 0 Kb)
+0006.372 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0006.375 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0006.375 (0) Table wp_commentmeta: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_commentmeta.table.gz - 0 Kb)
+0006.378 (0) Table wp_comments: Total expected rows (approximate): 1
+0006.381 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0006.381 (0) Table wp_comments: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_comments.table.gz - 0 Kb)
+0006.384 (0) Table wp_links: Total expected rows (approximate): 0
+0006.387 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0006.387 (0) Table wp_links: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_links.table.gz - 0 Kb)
+0006.390 (0) Table wp_postmeta: Total expected rows (approximate): 890
+0006.418 (0) Table wp_postmeta: Total rows added: 890 in 0.03 seconds
+0006.419 (0) Table wp_postmeta: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_postmeta.table.gz - 0 Kb)
+0006.422 (0) Table wp_posts: Total expected rows (approximate): 653
+0006.531 (0) Table wp_posts: Total rows added: 653 in 0.11 seconds
+0006.532 (0) Table wp_posts: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_posts.table.gz - 48 Kb)
+0006.534 (0) Table wp_term_relationships: Total expected rows (approximate): 174
+0006.541 (0) Table wp_term_relationships: Total rows added: 174 in 0.01 seconds
+0006.542 (0) Table wp_term_relationships: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_term_relationships.table.gz - 0 Kb)
+0006.545 (0) Table wp_term_taxonomy: Total expected rows (approximate): 24
+0006.550 (0) Table wp_term_taxonomy: Total rows added: 24 in 0.00 seconds
+0006.550 (0) Table wp_term_taxonomy: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_term_taxonomy.table.gz - 0 Kb)
+0006.553 (0) Table wp_terms: Total expected rows (approximate): 24
+0006.557 (0) Table wp_terms: Total rows added: 24 in 0.00 seconds
+0006.558 (0) Table wp_terms: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_terms.table.gz - 0 Kb)
+0006.560 (0) Table wp_cntctfrm_field: Total expected rows (approximate): 13
+0006.564 (0) Table wp_cntctfrm_field: Total rows added: 13 in 0.00 seconds
+0006.564 (0) Table wp_cntctfrm_field: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_cntctfrm_field.table.gz - 0 Kb)
+0006.567 (0) Table wp_ezpp_ezaffiliates: Total expected rows (approximate): 0
+0006.570 (0) Table wp_ezpp_ezaffiliates: Total rows added: 0 in 0.00 seconds
+0006.570 (0) Table wp_ezpp_ezaffiliates: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_ezaffiliates.table.gz - 0 Kb)
+0006.573 (0) Table wp_ezpp_option_meta: Total expected rows (approximate): 0
+0006.576 (0) Table wp_ezpp_option_meta: Total rows added: 0 in 0.00 seconds
+0006.576 (0) Table wp_ezpp_option_meta: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_option_meta.table.gz - 0 Kb)
+0006.579 (0) Table wp_ezpp_options: Total expected rows (approximate): 0
+0006.582 (0) Table wp_ezpp_options: Total rows added: 0 in 0.00 seconds
+0006.583 (0) Table wp_ezpp_options: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_options.table.gz - 0 Kb)
+0006.585 (0) Table wp_ezpp_paypal: Total expected rows (approximate): 0
+0006.588 (0) Table wp_ezpp_paypal: Total rows added: 0 in 0.00 seconds
+0006.589 (0) Table wp_ezpp_paypal: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_paypal.table.gz - 0 Kb)
+0006.591 (0) Table wp_ezpp_product_meta: Total expected rows (approximate): 0
+0006.594 (0) Table wp_ezpp_product_meta: Total rows added: 0 in 0.00 seconds
+0006.595 (0) Table wp_ezpp_product_meta: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_product_meta.table.gz - 0 Kb)
+0006.598 (0) Table wp_ezpp_products: Total expected rows (approximate): 0
+0006.601 (0) Table wp_ezpp_products: Total rows added: 0 in 0.00 seconds
+0006.601 (0) Table wp_ezpp_products: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_products.table.gz - 0 Kb)
+0006.604 (0) Table wp_ezpp_sale_details: Total expected rows (approximate): 0
+0006.607 (0) Table wp_ezpp_sale_details: Total rows added: 0 in 0.00 seconds
+0006.608 (0) Table wp_ezpp_sale_details: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_sale_details.table.gz - 0 Kb)
+0006.611 (0) Table wp_ezpp_sales: Total expected rows (approximate): 0
+0006.614 (0) Table wp_ezpp_sales: Total rows added: 0 in 0.00 seconds
+0006.614 (0) Table wp_ezpp_sales: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_sales.table.gz - 0 Kb)
+0006.617 (0) Table wp_ezpp_templates: Total expected rows (approximate): 3
+0006.620 (0) Table wp_ezpp_templates: Total rows added: 3 in 0.00 seconds
+0006.621 (0) Table wp_ezpp_templates: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_templates.table.gz - 0 Kb)
+0006.623 (0) Table wp_wponlinebackup_activity_log: Total expected rows (approximate): 1
+0006.626 (0) Table wp_wponlinebackup_activity_log: Total rows added: 1 in 0.00 seconds
+0006.627 (0) Table wp_wponlinebackup_activity_log: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_activity_log.table.gz - 0 Kb)
+0006.629 (0) Table wp_wponlinebackup_event_log: Total expected rows (approximate): 10
+0006.632 (0) Table wp_wponlinebackup_event_log: Total rows added: 10 in 0.00 seconds
+0006.633 (0) Table wp_wponlinebackup_event_log: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_event_log.table.gz - 0 Kb)
+0006.636 (0) Table wp_wponlinebackup_generations: Total expected rows (approximate): 0
+0006.638 (0) Table wp_wponlinebackup_generations: Total rows added: 0 in 0.00 seconds
+0006.639 (0) Table wp_wponlinebackup_generations: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_generations.table.gz - 0 Kb)
+0006.641 (0) Table wp_wponlinebackup_items: Total expected rows (approximate): 3119
+0006.823 (0) Table wp_wponlinebackup_items: Total rows added: 3119 in 0.18 seconds
+0006.824 (0) Table wp_wponlinebackup_items: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_items.table.gz - 16 Kb)
+0006.827 (0) Table wp_wponlinebackup_local: Total expected rows (approximate): 0
+0006.831 (0) Table wp_wponlinebackup_local: Total rows added: 0 in 0.00 seconds
+0006.831 (0) Table wp_wponlinebackup_local: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_local.table.gz - 0 Kb)
+0006.834 (0) Table wp_wponlinebackup_scan_log: Total expected rows (approximate): 0
+0006.836 (0) Table wp_wponlinebackup_scan_log: Total rows added: 0 in 0.00 seconds
+0006.837 (0) Table wp_wponlinebackup_scan_log: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_scan_log.table.gz - 0 Kb)
+0006.839 (0) Table wp_wponlinebackup_status: Total expected rows (approximate): 1
+0006.842 (0) Table wp_wponlinebackup_status: Total rows added: 1 in 0.00 seconds
+0006.843 (0) Table wp_wponlinebackup_status: finishing file (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_status.table.gz - 0 Kb)
+0006.845 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_options.table.gz (1/28): adding to final database dump
+0006.873 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_users.table.gz (2/28): adding to final database dump
+0006.873 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_usermeta.table.gz (3/28): adding to final database dump
+0006.874 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_commentmeta.table.gz (4/28): adding to final database dump
+0006.875 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_comments.table.gz (5/28): adding to final database dump
+0006.876 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_links.table.gz (6/28): adding to final database dump
+0006.877 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_postmeta.table.gz (7/28): adding to final database dump
+0006.888 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_posts.table.gz (8/28): adding to final database dump
+0006.917 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_term_relationships.table.gz (9/28): adding to final database dump
+0006.919 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_term_taxonomy.table.gz (10/28): adding to final database dump
+0006.919 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_terms.table.gz (11/28): adding to final database dump
+0006.920 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_cntctfrm_field.table.gz (12/28): adding to final database dump
+0006.921 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_ezaffiliates.table.gz (13/28): adding to final database dump
+0006.922 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_option_meta.table.gz (14/28): adding to final database dump
+0006.923 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_options.table.gz (15/28): adding to final database dump
+0006.923 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_paypal.table.gz (16/28): adding to final database dump
+0006.924 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_product_meta.table.gz (17/28): adding to final database dump
+0006.925 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_products.table.gz (18/28): adding to final database dump
+0006.926 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_sale_details.table.gz (19/28): adding to final database dump
+0006.926 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_sales.table.gz (20/28): adding to final database dump
+0006.927 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_ezpp_templates.table.gz (21/28): adding to final database dump
+0006.928 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_activity_log.table.gz (22/28): adding to final database dump
+0006.929 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_event_log.table.gz (23/28): adding to final database dump
+0006.930 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_generations.table.gz (24/28): adding to final database dump
+0006.931 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_items.table.gz (25/28): adding to final database dump
+0006.966 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_local.table.gz (26/28): adding to final database dump
+0006.967 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_scan_log.table.gz (27/28): adding to final database dump
+0006.968 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db-table-wp_wponlinebackup_status.table.gz (28/28): adding to final database dump
+0006.969 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db.gz: finished writing out complete database file (208 Kb)
+0006.973 (0) Total database tables backed up: 28 (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db.gz: checksum (SHA1): 3052a3f6ebde72c4b307502d7a93941d33670607)
+0006.974 (0) Saving backup history
+0006.977 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0006.978 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0006.979 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0006.979 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-others.zip: others: This file has not yet been successfully uploaded: will queue
+0006.980 (0) backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db.gz: db: This file has not yet been successfully uploaded: will queue
+0006.981 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0006.983 (0) Cloud backup selection: 
+0006.983 (0) No remote despatch: user chose no remote backup service
+0006.986 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0006.986 (0) Number of backup sets in history: 1
+0006.987 (0) Examining backup set with datestamp: 1394443729 (Mar 10 2014 09:28:49)
+0006.988 (0) 1394443729: db: this set includes a database (backup_2014-03-10-1328_Paul_Mitchell_bda8fe1ef163-db.gz); db count is now 1
+0006.989 (0) 1394443729: this backup set remains non-empty (1/1); will retain in history
+0006.990 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0006.991 (0) Resume backup (bda8fe1ef163, 0): finish run
+0006.992 (0) Decremented the semaphore (fd) by 1
+0006.993 (0) Semaphore (fd) unlocked
+0006.993 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0006.995 (0) The backup apparently succeeded and is now complete
+0006.996 (0) No email will/can be sent - the user has not configured an email address.
+0006.997 (0) Резервное копирование успешно завершено
