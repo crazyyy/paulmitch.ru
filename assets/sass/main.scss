@@ -18,7 +18,11 @@ body {
   padding: 0;
 
   color: #888;
-  background: #f7f7f7;
+  background-color: #fcfcfc;
+  background-image: url(../images/nicole-hair-bw1.jpg);
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: top center;
 }
 
 .center {
@@ -369,7 +373,7 @@ a {
 
   text-align: center;
 
-  background: url(images/menu_arrow.png) no-repeat;
+  background: url(../images/menu_arrow.png) no-repeat;
 }
 
 /*SLIDER*/
@@ -539,7 +543,7 @@ a {
     text-align: center;
 
     color: #fff;
-    background: url(images/date_meta.png) no-repeat;
+    background: url(../images/date_meta.png) no-repeat;
   }
 }
 
@@ -558,7 +562,7 @@ a {
   text-align: center;
 
   color: #fff;
-  background: url(images/date_meta.png) no-repeat;
+  background: url(../images/date_meta.png) no-repeat;
 }
 
 .lay1 .block_comm,
@@ -573,7 +577,7 @@ a {
   width: 57px;
   height: 55px;
 
-  background: url(images/comm_meta.png) no-repeat;
+  background: url(../images/comm_meta.png) no-repeat;
 }
 
 .lay1 .block_comm a,
@@ -857,7 +861,7 @@ a {
   margin-left: 0;
   padding-left: 40px;
 
-  background: url(images/lgn_quote.png) no-repeat top left;
+  background: url(../images/lgn_quote.png) no-repeat top left;
 }
 
 .post-edit-link {
@@ -884,7 +888,7 @@ a {
 
   text-align: left;
 
-  background: url(images/trans_black_2.png) repeat;
+  background: url(../images/trans_black_2.png) repeat;
 }
 
 .post table img,
@@ -902,7 +906,7 @@ a {
     padding: 9px 24px;
 
     color: #333;
-    background: url(images/trans_black.png) repeat;
+    background: url(../images/trans_black.png) repeat;
   }
 }
 
@@ -915,13 +919,13 @@ a {
     padding: 9px 24px;
 
     color: #333;
-    background: url(images/trans_black.png) repeat;
+    background: url(../images/trans_black.png) repeat;
   }
   pre {
     padding: 0 10px;
 
     color: #333;
-    background: url(images/trans_black.png) repeat;
+    background: url(../images/trans_black.png) repeat;
   }
 }
 
@@ -1004,7 +1008,7 @@ a img {
   text-align: center;
 
   border: 1px solid #ececec;
-  background: url(images/trans_black.png) repeat;
+  background: url(../images/trans_black.png) repeat;
   img {
     max-width: 98% !important;
   }
@@ -1105,7 +1109,7 @@ h3 {
 .commentlist li ul li .comment-body {
   margin-bottom: 15px;
 
-  background: url(images/trans_black_2.png) repeat;
+  background: url(../images/trans_black_2.png) repeat;
 }
 
 .vcard {
@@ -1246,7 +1250,7 @@ h3#reply-title {
 
   color: #888;
   border: 1px solid #ececec;
-  background: url(images/trans_black_2.png);
+  background: url(../images/trans_black_2.png);
 }
 
 .comment-form-comment label,
@@ -1268,7 +1272,7 @@ h3#reply-title {
 
     color: #888;
     border: 1px solid #ececec;
-    background: url(images/trans_black_2.png);
+    background: url(../images/trans_black_2.png);
   }
 }
 
@@ -1424,7 +1428,7 @@ h3#reply-title {
   .widget_pages li,
   .widget_links li,
   .widget_categories li {
-    list-style-image: url(images/list_type.png);
+    list-style-image: url(../images/list_type.png);
   }
   .widgets .widget li:last-child {
     border: none;
@@ -1730,7 +1734,7 @@ h3#reply-title {
   text-indent: -200px;
 
   color: #fff;
-  background: url(images/trans_black.png);
+  background: url(../images/trans_black.png);
 }
 
 .rltd_button {
@@ -1741,7 +1745,7 @@ h3#reply-title {
   width: 45px;
   height: 45px;
 
-  background: url(images/rltd_button.png) no-repeat;
+  background: url(../images/rltd_button.png) no-repeat;
 }
 
 /*SHORTCODES
@@ -1800,12 +1804,12 @@ h3#reply-title {
   list-style-type: none;
 
   color: #fff;
-  background: url(images/trans_black.png) repeat;
+  background: url(../images/trans_black.png) repeat;
   a {
     color: #fff;
   }
   &.active {
-    background: url(images/trans_black_2.png) repeat;
+    background: url(../images/trans_black_2.png) repeat;
   }
 }
 
@@ -1819,7 +1823,7 @@ h3#reply-title {
   min-height: 100px;
   padding: 10px;
 
-  background: url(images/trans_black_2.png) repeat;
+  background: url(../images/trans_black_2.png) repeat;
 }
 
 .post_content ul {
@@ -1850,12 +1854,12 @@ h3#reply-title {
 
   cursor: pointer;
 
-  background: url(images/foot_arrow_down.png) no-repeat;
+  background: url(../images/foot_arrow_down.png) no-repeat;
   background-position: 5px 15px;
 }
 
 .lgn_toggle .down {
-  background: url(images/foot_arrow_up.png) no-repeat;
+  background: url(../images/foot_arrow_up.png) no-repeat;
   background-position: 5px 12px;
 }
 
@@ -1868,23 +1872,23 @@ h3#reply-title {
 /*LIST ELEMENTS*/
 
 .list1 li {
-  list-style-image: url(images/list1.png);
+  list-style-image: url(../images/list1.png);
 }
 
 .list2 li {
-  list-style-image: url(images/list2.png);
+  list-style-image: url(../images/list2.png);
 }
 
 .list3 li {
-  list-style-image: url(images/list3.png);
+  list-style-image: url(../images/list3.png);
 }
 
 .list4 li {
-  list-style-image: url(images/list4.png);
+  list-style-image: url(../images/list4.png);
 }
 
 .list5 li {
-  list-style-image: url(images/list5.png);
+  list-style-image: url(../images/list5.png);
 }
 
 /*MESSAGE BOX*/
@@ -1899,7 +1903,7 @@ h3#reply-title {
 
   color: #3f834c;
   border: 1px solid #98f1a9;
-  background: #c8ffd3 url(images/lgn_success.png) no-repeat;
+  background: #c8ffd3 url(../images/lgn_success.png) no-repeat;
   background-position: 5px 5px;
 }
 
@@ -1913,7 +1917,7 @@ h3#reply-title {
 
   color: #469cc0;
   border: 1px solid #8ac7e8;
-  background: #c5eaf5 url(images/lgn_info.png) no-repeat;
+  background: #c5eaf5 url(../images/lgn_info.png) no-repeat;
   background-position: 5px 5px;
 }
 
@@ -1927,7 +1931,7 @@ h3#reply-title {
 
   color: #af7a18;
   border: 1px solid #ebc887;
-  background: #f7e0b6 url(images/lgn_warning.png) no-repeat;
+  background: #f7e0b6 url(../images/lgn_warning.png) no-repeat;
   background-position: 5px 5px;
 }
 
@@ -1941,7 +1945,7 @@ h3#reply-title {
 
   color: #b04840;
   border: 1px solid #e49a94;
-  background: #ffd0cc url(images/lgn_error.png) no-repeat;
+  background: #ffd0cc url(../images/lgn_error.png) no-repeat;
   background-position: 5px 5px;
 }
 
@@ -1957,7 +1961,7 @@ h3#reply-title {
   margin: 15px 0;
   padding-left: 37px;
 
-  background: url(images/lgn_quote.png) no-repeat;
+  background: url(../images/lgn_quote.png) no-repeat;
   background-position: 5px 5px;
 }
 
@@ -2100,7 +2104,7 @@ h3#reply-title {
 
     color: #888;
     border: 1px solid #ececec;
-    background: url(images/trans_black_2.png);
+    background: url(../images/trans_black_2.png);
   }
 }
 
@@ -2151,7 +2155,7 @@ h3#reply-title {
 
       text-indent: -999999px;
 
-      background: url(images/social.png) no-repeat;
+      background: url(../images/social.png) no-repeat;
     }
   }
   .soc_fb a {
@@ -2387,7 +2391,7 @@ h3#reply-title {
   height: 170px;
 
   color: #fff;
-  background: url(images/slider_content.png) no-repeat;
+  background: url(../images/slider_content.png) no-repeat;
   h2 {
     font-size: 24px;
 
@@ -2529,7 +2533,7 @@ ol#controls {
 
   color: #fff;
   border-left: 1px solid #777;
-  background: url(images/trans_black3.png);
+  background: url(../images/trans_black3.png);
 }
 
 /* The Nivo Slider styles */
@@ -2607,7 +2611,7 @@ ol#controls {
 
   opacity: 1;
   color: #333;
-  background: url(images/nivo_caption.png) no-repeat;
+  background: url(../images/nivo_caption.png) no-repeat;
   h2 {
     margin: 0;
     padding-left: 5px;
@@ -2652,7 +2656,7 @@ ol#controls {
 
   text-indent: -999999px;
 
-  background: url(images/nivo_nav.png) left no-repeat;
+  background: url(../images/nivo_nav.png) left no-repeat;
 }
 
 .nivo-nextNav {
@@ -2665,7 +2669,7 @@ ol#controls {
 
   text-indent: -999999px;
 
-  background: url(images/nivo_nav.png) right no-repeat;
+  background: url(../images/nivo_nav.png) right no-repeat;
 }
 
 /* Control nav styles (e.g. 1,2,3...) */
@@ -2691,7 +2695,7 @@ ol#controls {
     margin-right: 4px;
     padding: 4px;
 
-    background: url(images/nivo_caption.png) center;
+    background: url(../images/nivo_caption.png) center;
   }
   a.active img {
     background: #fff;
@@ -2711,7 +2715,7 @@ ol#controls {
   height: 32px;
   margin-left: 470px;
 
-  background: url(images/ajax-loader.gif) no-repeat;
+  background: url(../images/ajax-loader.gif) no-repeat;
 }
 
 /*SHARE THIS*/
@@ -2739,49 +2743,49 @@ ol#controls {
     padding-left: 20px;
   }
   .lgn_fb {
-    background: url(images/social_post.png) top left no-repeat;
+    background: url(../images/social_post.png) top left no-repeat;
   }
   .lgn_twt {
-    background: url(images/social_post.png) left no-repeat;
+    background: url(../images/social_post.png) left no-repeat;
     background-position: 0 -21px;
   }
   .lgn_del {
-    background: url(images/social_post.png) left no-repeat;
+    background: url(../images/social_post.png) left no-repeat;
     background-position: 0 -42px;
   }
   .lgn_digg {
-    background: url(images/social_post.png) left no-repeat;
+    background: url(../images/social_post.png) left no-repeat;
     background-position: 0 -63px;
   }
   .lgn_stmbl {
-    background: url(images/social_post.png) left no-repeat;
+    background: url(../images/social_post.png) left no-repeat;
     background-position: 0 -83px;
   }
   .lgn_gplus {
-    background: url(images/social_post.png) left no-repeat;
+    background: url(../images/social_post.png) left no-repeat;
     background-position: 0 -104px;
   }
   .lgn_fb:hover {
-    background: url(images/social_post_hover.png) top left no-repeat;
+    background: url(../images/social_post_hover.png) top left no-repeat;
   }
   .lgn_twt:hover {
-    background: url(images/social_post_hover.png) left no-repeat;
+    background: url(../images/social_post_hover.png) left no-repeat;
     background-position: 0 -21px;
   }
   .lgn_del:hover {
-    background: url(images/social_post_hover.png) left no-repeat;
+    background: url(../images/social_post_hover.png) left no-repeat;
     background-position: 0 -42px;
   }
   .lgn_digg:hover {
-    background: url(images/social_post_hover.png) left no-repeat;
+    background: url(../images/social_post_hover.png) left no-repeat;
     background-position: 0 -63px;
   }
   .lgn_stmbl:hover {
-    background: url(images/social_post_hover.png) left no-repeat;
+    background: url(../images/social_post_hover.png) left no-repeat;
     background-position: 0 -83px;
   }
   .lgn_gplus:hover {
-    background: url(images/social_post_hover.png) left no-repeat;
+    background: url(../images/social_post_hover.png) left no-repeat;
     background-position: 0 -104px;
   }
 }
@@ -2854,7 +2858,7 @@ h6,
     height: 20px;
     margin: 8px 4px 0 0;
 
-    background-image: url('/wp-content/uploads/2014/02/sonet_icon.png');
+    background-image: url(../images/sonet_icon.png);
     &.vkgroup {
       background-position: -84px 0;
     }
