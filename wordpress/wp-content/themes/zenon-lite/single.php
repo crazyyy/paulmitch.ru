@@ -3,39 +3,6 @@
 <div id="content">
   <div class="single_wrap">
 
-
-
-
-  <div class="testblock">
-    В корзине: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)
-    <br />
-    <a href="javascript:;" class="simpleCart_empty">очистить</a>
-
-
-
-  <div class="simpleCart_items" >
-  </div>
-
-
-  <br />
-  SubTotal: <span id="simpleCart_total" class="simpleCart_total"></span> <br />
-  -----------------------------<br />
-  Final Total: <span id="simpleCart_grandTotal" class="simpleCart_grandTotal"></span> <br />
-
-  <a href="javascript:;" class="simpleCart_checkout">checkout</a>
-
-  <div id="test_id"></div>
-
-
-  </div>
-
-
-
-
-
-
-
-
     <div class="single_post">
     <?php if(have_posts()): ?><?php while(have_posts()): ?><?php the_post(); ?>
 
@@ -55,7 +22,6 @@
           <?php if(of_get_option('disscats_checkbox') == "0"){ ?>
           <div class="post_meta">
           <?php if( has_category() ) { ?>
-            <a href="javascript:;" class="add-to-cart" onclick="simpleCart.add({name:'<?php the_title(); ?>', cat: '<?php the_category(', '); ?>',thumb:'e.png'});" >В корзину</a>
             <div class="post_cat">
               <?php _e('Серия' , 'zenon'); ?> : <div class="catag_list"><?php the_category(', '); ?></div>
             </div><?php } ?>
