@@ -1,7 +1,7 @@
 @import 'import/mixin';
 @import 'old/yanone_kaffeesatz';
-@import 'old/fancybox';
 @import 'font_fontawesome';
+@import 'yanone_kaffeesatz';
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -22,7 +22,9 @@ body {
   width: 1000px;
   margin: 0 auto;
 }
-
+#zn_slider {
+  border: none;
+}
 a {
   text-decoration: none;
 
@@ -1454,14 +1456,16 @@ h3#reply-title {
     .simpleCart_checkout {
       display: block;
 
+      width: 30%;
+      margin: 0 0 0 195px;
+      padding: 5px;
+
+      text-align: center;
+      text-transform: uppercase;
+
       color: #fff;
       border-radius: 3px;
       background-color: red;
-      width: 30%;
-      padding: 5px;
-      text-transform: uppercase;
-      text-align: center;
-      margin: 0 0 0 195px;
       &:hover {
         background-color: darken(red, 15%);
       }

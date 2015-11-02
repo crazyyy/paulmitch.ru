@@ -1,0 +1,489 @@
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ *
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+ *
+ * Version: 1.3.3 (04/11/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#fancybox-loading {
+  position: fixed;
+  z-index: 1104;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  overflow: hidden;
+
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+
+  cursor: pointer;
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 480px;
+
+    background-image: url(../images/other/fancybox.png);
+  }
+}
+
+#fancybox-overlay {
+  position: absolute;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+}
+
+#fancybox-tmp {
+  display: none;
+  overflow: auto;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+#fancybox-wrap {
+  position: absolute;
+  z-index: 1101;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  padding: 20px;
+
+  outline: none;
+}
+
+#fancybox-outer {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  background: #fff;
+}
+
+#fancybox-content {
+  position: relative;
+  z-index: 1102;
+
+  overflow: hidden;
+
+  width: 0;
+  height: 0;
+  padding: 0;
+
+  border: 0 solid #fff;
+  outline: none;
+}
+
+#fancybox-hide-sel-frame {
+  position: absolute;
+  z-index: 1101;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+}
+
+#fancybox-close {
+  position: absolute;
+  z-index: 1103;
+  top: -15px;
+  right: -15px;
+
+  display: none;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+
+  background: transparent url('../images/other/fancybox.png') -40px 0;
+}
+
+#fancybox-error {
+  font: normal 12px/20px Arial;
+
+  margin: 0;
+  padding: 14px;
+
+  color: #444;
+}
+
+#fancybox-img {
+  line-height: 0;
+
+  width: 100%;
+  height: 100%;
+  height: auto !important;
+  margin: 0;
+  padding: 0;
+
+  vertical-align: top;
+
+  border: none;
+  outline: none;
+}
+
+#fancybox-frame {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+#fancybox-left,
+#fancybox-right {
+  position: absolute;
+  z-index: 1102;
+  bottom: 0;
+
+  display: none;
+
+  width: 35%;
+  height: 100%;
+
+  cursor: pointer;
+
+  outline: none;
+  background: transparent url('../images/other/blank.gif');
+}
+
+#fancybox-left {
+  left: 0;
+}
+
+#fancybox-right {
+  right: 0;
+}
+
+#fancybox-left-ico,
+#fancybox-right-ico {
+  position: absolute;
+  z-index: 1102;
+  top: 50%;
+  left: -9999px;
+
+  display: block;
+
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+
+  cursor: pointer;
+}
+
+#fancybox-left-ico {
+  background-image: url('../images/other/fancybox.png');
+  background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+  background-image: url('../images/other/fancybox.png');
+  background-position: -40px -60px;
+}
+
+#fancybox-left:hover,
+#fancybox-right:hover {
+  visibility: visible;
+  /* IE6 */
+}
+
+#fancybox-left:hover span {
+  left: 20px;
+}
+
+#fancybox-right:hover span {
+  right: 20px;
+  left: auto;
+}
+
+.fancybox-bg {
+  position: absolute;
+  z-index: 1001;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+#fancybox-bg-n {
+  top: -20px;
+  left: 0;
+
+  width: 100%;
+
+  background-image: url('../images/other/fancybox-x.png');
+}
+
+#fancybox-bg-ne {
+  top: -20px;
+  right: -20px;
+
+  background-image: url('../images/other/fancybox.png');
+  background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+  top: 0;
+  right: -20px;
+
+  height: 100%;
+
+  background-image: url('../images/other/fancybox-y.png');
+  background-position: -20px 0;
+}
+
+#fancybox-bg-se {
+  right: -20px;
+  bottom: -20px;
+
+  background-image: url('../images/other/fancybox.png');
+  background-position: -40px -182px;
+}
+
+#fancybox-bg-s {
+  bottom: -20px;
+  left: 0;
+
+  width: 100%;
+
+  background-image: url('../images/other/fancybox-x.png');
+  background-position: 0 -20px;
+}
+
+#fancybox-bg-sw {
+  bottom: -20px;
+  left: -20px;
+
+  background-image: url('../images/other/fancybox.png');
+  background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+  top: 0;
+  left: -20px;
+
+  height: 100%;
+
+  background-image: url('../images/other/fancybox-y.png');
+}
+
+#fancybox-bg-nw {
+  top: -20px;
+  left: -20px;
+
+  background-image: url('../images/other/fancybox.png');
+  background-position: -40px -122px;
+}
+
+#fancybox-title {
+  font-family: Helvetica;
+  font-size: 12px;
+
+  z-index: 1102;
+}
+
+.fancybox-title-inside {
+  position: relative;
+
+  padding-bottom: 10px;
+
+  text-align: center;
+
+  color: #333;
+  background: #fff;
+}
+
+.fancybox-title-outside {
+  padding-top: 10px;
+
+  color: #fff;
+}
+
+.fancybox-title-over {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  text-align: left;
+
+  color: #fff;
+}
+
+#fancybox-title-over {
+  display: block;
+
+  padding: 10px;
+
+  background-image: url('../images/other/fancy_title_over.png');
+}
+
+.fancybox-title-float {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+
+  height: 32px;
+}
+
+#fancybox-title-float-wrap {
+  width: auto;
+
+  border-collapse: collapse;
+
+  border: none;
+  td {
+    white-space: nowrap;
+
+    border: none;
+  }
+}
+
+#fancybox-title-float-left {
+  padding: 0 0 0 15px;
+
+  background: url('../images/other/fancybox.png') -40px -90px no-repeat;
+}
+
+#fancybox-title-float-main {
+  font-weight: bold;
+  line-height: 29px;
+
+  padding: 0 0 3px 0;
+
+  color: #fff;
+  background: url('../images/other/fancybox-x.png') 0 -40px;
+}
+
+#fancybox-title-float-right {
+  padding: 0 0 0 15px;
+
+  background: url('../images/other/fancybox.png') -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.fancybox-ie6 {
+  #fancybox-close {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_close.png', sizingMethod='scale');
+  }
+  #fancybox-left-ico {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_left.png', sizingMethod='scale');
+  }
+  #fancybox-right-ico {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_right.png', sizingMethod='scale');
+  }
+  #fancybox-title-over {
+    zoom: 1;
+
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_over.png', sizingMethod='scale');
+  }
+  #fancybox-title-float-left {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_left.png', sizingMethod='scale');
+  }
+  #fancybox-title-float-main {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_main.png', sizingMethod='scale');
+  }
+  #fancybox-title-float-right {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_right.png', sizingMethod='scale');
+  }
+  #fancybox-bg-w,
+  #fancybox-bg-e,
+  #fancybox-left,
+  #fancybox-right {
+    height: expression(this.parentNode.clientHeight + "px");
+  }
+}
+
+#fancybox-hide-sel-frame {
+  height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+  position: absolute;
+
+  margin-top: 0;
+  div {
+    background: transparent;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_loading.png', sizingMethod='scale');
+  }
+}
+
+/* IE6, IE7, IE8 */
+
+.fancybox-ie {
+  .fancybox-bg {
+    background: transparent !important;
+  }
+  #fancybox-bg-n {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_n.png', sizingMethod='scale');
+  }
+  #fancybox-bg-ne {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_ne.png', sizingMethod='scale');
+  }
+  #fancybox-bg-e {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_e.png', sizingMethod='scale');
+  }
+  #fancybox-bg-se {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_se.png', sizingMethod='scale');
+  }
+  #fancybox-bg-s {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_s.png', sizingMethod='scale');
+  }
+  #fancybox-bg-sw {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_sw.png', sizingMethod='scale');
+  }
+  #fancybox-bg-w {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_w.png', sizingMethod='scale');
+  }
+  #fancybox-bg-nw {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/fancy_shadow_nw.png', sizingMethod='scale');
+  }
+}
