@@ -78,123 +78,49 @@ if ( !is_admin() ) {
 }
 add_action('wp_enqueue_scripts', 'znn_ie_css');
 
-function znn_other_css() {
-if ( !is_admin() ) {
-wp_enqueue_style('customfont',get_template_directory_uri().'/fonts/'.$zn_fonts = of_get_option('font_select', 'yanone_kaffeesatz' ).'.css');
-if(of_get_option('disslight_checkbox') == "0"){ ?><?php wp_enqueue_style('fancybox',get_template_directory_uri().'/css/fancybox.css'); }
+
+
+function wpeHeaderScripts() {
+  if (!is_admin()) {
+    wp_deregister_script('jquery'); // Deregister WordPress jQuery   RU: Отключаю стандартный JQuery WordPress'а
+    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0'); // Google CDN jQuery   RU: Регистрирую JQuery с хостинга Google
+    wp_enqueue_script('jquery'); // Enqueue it!    RU: Подключаю его
+
+    wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '2.8.3'); // Modernizr
+    wp_enqueue_script('modernizr'); // Enqueue it!
+
+    wp_register_script('jqueryf', get_template_directory_uri() . '/js/jquery.js', array(), '1.11.0', true);
+    wp_enqueue_script('jqueryf'); // Enqueue it!    RU: Подключаю его
+
+    //  Load footer scripts (footer.php)
+    wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true); // Custom scripts
+    wp_enqueue_script('wpeScripts'); // Enqueue it!
   }
 }
-add_action('wp_enqueue_scripts', 'znn_other_css');
+add_action('wp_enqueue_scripts', 'wpeHeaderScripts');
 
-//Load Java Scripts to header
-function znn_head_js() {
-if ( !is_admin() ) {
-wp_enqueue_script('jquery');
-wp_enqueue_script('znn_js',get_template_directory_uri().'/zenon.js');
-wp_enqueue_script('znn_other',get_template_directory_uri().'/js/other.js');
-wp_enqueue_script('znn_transform',get_template_directory_uri().'/js/jquery.transform.min.js');
-if(of_get_option('slider_select') == "easyslider"){ wp_enqueue_script('znn_easyslider',get_template_directory_uri().'/js/easyslider.js');}
-if(of_get_option('disslight_checkbox') == "0"){ wp_enqueue_script('znn_fancybox',get_template_directory_uri().'/js/fancybox.js'); }
-
-  }
+//  Remove wp_head() injected Recent Comment styles
+function my_remove_recent_comments_style() {
+  global $wp_widget_factory;
+  remove_action('wp_head', array(
+    $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
+    'recent_comments_style'
+  ));
 }
-add_action('wp_enqueue_scripts', 'znn_head_js');
-
-//Load Java Scripts to Footer
-add_action('wp_footer', 'znn_load_js');
-
-function znn_load_js() { ?>
-
-<?php if(of_get_option('slider_select') == "easyslider"){ ?>
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    jQuery(function(){
-  jQuery("#slider").easySlider({
-    auto: true,
-    continuous: true,
-    numeric: true,
-    pause: <?php echo of_get_option('sliderspeed_text'); ?>
-    });
-  });
-  /* ]]> */
-  </script>
-<?php } ?>
-
- <?php if(of_get_option('stickm_checkbox') == "1"){ ?>
-    <script type="text/javascript">
-  /* <![CDATA[ */
-    //Sticky MENU
-  jQuery(window).load(function($) {
-  if (jQuery("body").hasClass('logged-in')) {
-      jQuery("#topmenu").sticky({topSpacing:27});
-    }
-    else {
-      jQuery("#topmenu").sticky({topSpacing:0});
-  }
-  jQuery("#topmenu").css({"z-index":"11"});
-  });
-  //JQUERY Site title Animation
-  jQuery(window).scroll(function() {
-    if (jQuery(this).scrollTop() < 150) {
-      jQuery(".scroll_title").hide();
-    }
-    else {
-      jQuery(".scroll_title").show('fast');
-    }
-  });
-  /* ]]> */
-  </script>
-<?php } ?>
-
-<?php if(of_get_option('ajaxd_checkbox') == "1"){ ?>
-<script type="text/javascript">
-/* <![CDATA[ */
-//AJAX PAGINATION
-jQuery(document).ready(function(){
-jQuery('.amp_next, .amp_prev').css({"display":"none"});
-jQuery('.znn_paginate a:first').each(function () {
-    var href = jQuery(this).attr('href');
-    jQuery(this).attr('href', href + '?paged=1');
-});
-
-jQuery('.znn_paginate a').each(function(){
-        this.href = this.href.replace('/page/', '?paged=');
-});
-    jQuery('.znn_paginate a').live('click', function(e)  {
-  jQuery('.znn_paginate a, span.amp_page').removeClass('amp_current'); // remove if already existant
-    jQuery(this).addClass('amp_current');
-
-<?php if(of_get_option('layout_images') == "layout1"){ ?>
-  e.preventDefault();
-      var link = jQuery(this).attr('href');
-  jQuery('.lay1_wrap').html('<div class="zn_ajaxwrap"><div class="zn_ajax"></div></div>').load(link + '.lay1_wrap .post', function() {
-      var divs = jQuery(".lay1 .post");
-      for(var i = 0; i < divs.length; i+=3) {
-        divs.slice(i, i+3).wrapAll("<div class='zn_row'></div>"); }
-    jQuery('.lay1_wrap').fadeIn(500); });
-<?php } ?>
-
-    });
-});  // end ready function
-/* ]]> */
-</script>
-<?php } ?>
 
 
-    <?php }
 
 //Zenon get the first image of the post Function
-function znn_get_images($overrides = '', $exclude_thumbnail = false)
-{
-    return get_posts(wp_parse_args($overrides, array(
-        'numberposts' => -1,
-        'post_parent' => get_the_ID(),
-        'post_type' => 'attachment',
-        'post_mime_type' => 'image',
-        'order' => 'ASC',
-        'exclude' => $exclude_thumbnail ? array(get_post_thumbnail_id()) : array(),
-        'orderby' => 'menu_order ID'
-    )));
+function znn_get_images($overrides = '', $exclude_thumbnail = false) {
+  return get_posts(wp_parse_args($overrides, array(
+      'numberposts' => -1,
+      'post_parent' => get_the_ID(),
+      'post_type' => 'attachment',
+      'post_mime_type' => 'image',
+      'order' => 'ASC',
+      'exclude' => $exclude_thumbnail ? array(get_post_thumbnail_id()) : array(),
+      'orderby' => 'menu_order ID'
+  )));
 }
 
 

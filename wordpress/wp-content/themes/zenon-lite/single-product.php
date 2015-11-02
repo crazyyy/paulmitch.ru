@@ -18,7 +18,9 @@
         <div class="product-block">
           <div class="product-img">
             <?php if ( has_post_thumbnail()) :
-              the_post_thumbnail('medium');
+              $imgurl = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
+              <img src="<?php echo $imgurl; ?>" alt="">
+              <?php
             else: ?>
               <img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
             <?php endif; ?>
@@ -35,7 +37,7 @@
             $size = get_sub_field('weight');
             $price = get_sub_field('price');
           ?>
-            <li><span class="size"><?php echo $size; ?><?php the_field('measure'); ?></span> - <span class="price"><?php echo $price; ?></span>р.  <a href="javascript:;" onclick="simpleCart.add({name:'<?php the_title(); ?>',size:'<?php echo $size; ?>',price: <?php echo $price; ?>});" >В корзину</a></li>
+            <li><span class="size"><?php echo $size; ?><?php the_field('measure'); ?></span> - <span class="price"><?php echo $price; ?></span> <i class="fa fa-rub"></i>  <a href="javascript:;" onclick="simpleCart.add({name:'<?php the_title(); ?>',size:'<?php echo $size; ?>',price: <?php echo $price; ?>,thumb:'<?php echo $imgurl; ?>'});" >В корзину</a></li>
 
           <?php endwhile; ?>
           </ul>
