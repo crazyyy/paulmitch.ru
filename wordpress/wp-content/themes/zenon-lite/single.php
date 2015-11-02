@@ -23,12 +23,12 @@
           <div class="post_meta">
           <?php if( has_category() ) { ?>
             <div class="post_cat">
-              <?php _e('Серия' , 'zenon'); ?> : <div class="catag_list"><?php the_category(', '); ?></div>
+              <?php _e('Рубрика' , 'zenon'); ?> : <div class="catag_list"><?php the_category(', '); ?></div>
             </div><?php } ?>
 
             <?php if( has_tag() ) { ?>
             <div class="post_tag">
-              <?php _e('Tags' , 'zenon'); ?> : <div class="catag_list"><?php the_tags(' '); ?></div>
+              <?php _e('Метки' , 'zenon'); ?> : <div class="catag_list"><?php the_tags(' '); ?></div>
             </div><?php } ?>
           </div><!-- post_meta -->
           <?php } ?>
