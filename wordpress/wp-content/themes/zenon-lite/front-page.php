@@ -11,6 +11,14 @@
 </div>
 <!--SLIDER END-->
 
+<!--LATEST POSTS-->
+<?php if ( is_home() ) { ?>
+  <?php if(of_get_option('latstpst_checkbox') == "1"){ ?><?php get_template_part(''.$zn_lays = of_get_option('layout_images', 'layout1').''); ?><?php } else { ?><?php } ?>
+<?php } else { ?>
+  <?php get_template_part(''.$zn_lays = of_get_option('layout_images', 'layout1').''); ?>
+<?php } ?>
+<!--LATEST POSTS END-->
+
 <!--MIDROW STARTS-->
 <?php if(of_get_option('blocks_checkbox') == "1"){ ?>
 <div class="midrow">
@@ -61,15 +69,6 @@
 
 </div><!-- midrow -->
 <?php }?>
-
 <!--MIDROW END-->
-
-<!--LATEST POSTS-->
-<?php if ( is_home() ) { ?>
-  <?php if(of_get_option('latstpst_checkbox') == "1"){ ?><?php get_template_part(''.$zn_lays = of_get_option('layout_images', 'layout1').''); ?><?php } else { ?><?php } ?>
-<?php } else { ?>
-  <?php get_template_part(''.$zn_lays = of_get_option('layout_images', 'layout1').''); ?>
-<?php } ?>
-<!--LATEST POSTS END-->
 
 <?php get_footer(); ?>

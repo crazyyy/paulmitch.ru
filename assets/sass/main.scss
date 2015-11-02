@@ -2850,13 +2850,22 @@ h6,
 .sonetlink {
   float: right;
 
-  padding: 2px 8px 0 0;
+  padding: 10px 0 0;
+  span {
+    position: relative;
+    top: -5px;
+  }
+  span,
+  a {
+    display: inline-block;
+
+    height: 20px;
+    margin: 0 4px 0 4px;
+  }
   a {
     display: inline-block;
 
     width: 20px;
-    height: 20px;
-    margin: 8px 4px 0 0;
 
     background-image: url(../images/sonet_icon.png);
     &.vkgroup {
