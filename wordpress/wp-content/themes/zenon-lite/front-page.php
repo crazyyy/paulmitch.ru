@@ -1,72 +1,40 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
-<!--SLIDER END-->
-
-<div class="slider_wrap">
-    <div id="zn_slider">
-      <?php get_template_part(''.$zn_slides = of_get_option('slider_select', 'easyslider').''); ?>
-    </div>
-    <div class="skew_bottom_big"></div>
-    <div class="skew_bottom_right"></div>
-</div>
-<!--SLIDER END-->
-
-<hr>
-<?php the_field("test"); ?>
 
 
-<?php
-echo "<hr>
-<hr><br><br>";
-$terms = get_field('taxonomys');
 
-if( $terms ): ?>
+<?php $terms = get_field('taxonomys'); if( $terms ): ?>
+<div class="lay1">
 
-    <ul>
-
+  <div class="lay1_wrap">
     <?php foreach( $terms as $term ): ?>
+      <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+        <div class="post_content">
+          <h2 class="postitle"><a href="<?php echo get_term_link( $term ); ?>" title="<?php echo $term->name; ?>"><?php echo $term->name; ?></a></h2>
 
-        <h2><?php echo $term->name; ?></h2>
-        <p><?php echo $term->description; ?></p>
-        <a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
 
+        <div class="post_image">
+          <!--CALL TO POST IMAGE-->
+          <a href="<?php echo get_term_link( $term ); ?>">
+            <img src="<?php echo get_field('image', $term); ?>" alt="">
+          </a>
+        </div><!-- post_image -->
+
+        <div class="znn_excerptmore">
+          <p><?php echo $term->description; ?></p>
+        </div><!-- /.znn_excerptmore -->
+
+        </div><!-- post_content -->
+
+      </div><!-- post_class -->
     <?php endforeach; ?>
-
-    </ul>
-
+  </div><!-- lay1_wrap -->
 
 
-<?php endif;
-
-echo " <br>
-<hr>";?>
-
-<?php
-
-$term = get_field('taxonomys');
-
-if( $term ): ?>
-
-    <h2><?php echo $term->name; ?></h2>
-    <p><?php echo $term->description; ?></p>
-
-<?php endif;
-echo "<hr><br><br>
-<hr>";
-
-?>
+</div><!-- lay1 -->
+<?php endif; ?>
 
 
-
-
-
-<!--LATEST POSTS-->
-<?php if ( is_home() ) { ?>
-  <?php if(of_get_option('latstpst_checkbox') == "1"){ ?><?php get_template_part(''.$zn_lays = of_get_option('layout_images', 'layout1').''); ?><?php } else { ?><?php } ?>
-<?php } else { ?>
-  <?php get_template_part(''.$zn_lays = of_get_option('layout_images', 'layout1').''); ?>
-<?php } ?>
-<!--LATEST POSTS END-->
 
 <!--MIDROW STARTS-->
 <?php if(of_get_option('blocks_checkbox') == "1"){ ?>
