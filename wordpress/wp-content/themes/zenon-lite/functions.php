@@ -1,12 +1,12 @@
 <?php
-    add_theme_support('custom-background');
+
+  add_theme_support('custom-background');
   add_theme_support('automatic-feed-links');
   if ( ! isset( $content_width ) )
   $content_width = 630;
 
 //Post Thumbnail
-
-   add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails' );
 
 //Register Menus
   register_nav_menus( array(
@@ -14,52 +14,6 @@
     'footer' => __( 'Footer Navigation', 'zenon' )
   ) );
 
-
-//Include CSS
-function znn_customstyle() { ?>
-
-<?php if(of_get_option('prmtrans_checkbox') == "1"){ ?>
-<style type="text/css">
-#zn_slider, .midrow_blocks, .lay1 .hentry, .lay2, .lay3 .post_image, .lay3 .post_content, .single_post, .commentlist li, #commentform, #commentform label, #sidebar .widgets .widget, #footer, #copyright, .amp_current, .amp_page:hover, .amp_next:hover, .amp_prev:hover, .page-numbers:hover, .navigation .current, #related_wrap ul, .trigger_wrap, .search_term, ol#controls li, .amp_page, .amp_next, .amp_prev, .page-numbers{ background:url(<?php echo get_template_directory_uri(); ?>/images/trans_black4.png) repeat; }
-.comment-form-comment textarea, .comment-form-author input, .comment-form-email input, .comment-form-url input{background:url(<?php echo get_template_directory_uri(); ?>/images/trans_black3.png) repeat;}
-.lay3_bridge{ display:none;}
-
-.skew_bottom_big, .skew_bottom_right, .skew_top_big, .skew_top_right, .single_skew, .single_skew .skew_bottom_big, .single_skew .skew_bottom_right, .depth-1 .single_skew, .single_skew_comm, .single_skew_comm .skew_top_big, .single_skew_comm .skew_top_right, #respond_wrap .single_skew, #respond_wrap .single_skew_comm{display:none!important;}
-.commentlist .depth-1{ margin-top:10px;}
-.midrow_blocks{ margin-top:30px;}
-.commentlist li{border-bottom:1px solid #ececec; border-top:1px solid #ececec;}
-</style>
-<?php } ?>
-
-<?php if(of_get_option('rounded_checkbox') == "1"){ ?>
-<style type="text/css">
-.skew_bottom_big, .skew_bottom_right, .skew_top_big, .skew_top_right, .single_skew, .single_skew .skew_bottom_big, .single_skew .skew_bottom_right, .depth-1 .single_skew, .single_skew_comm, .single_skew_comm .skew_top_big, .single_skew_comm .skew_top_right, #respond_wrap .single_skew, #respond_wrap .single_skew_comm{display:none!important;}
-.commentlist .depth-1{ margin-top:10px;}
-.midrow_blocks{ margin-top:30px;}
-.commentlist li{border-bottom:1px solid #ececec; border-top:1px solid #ececec;}
-
-.home #topmenu{border-radius: 8px 8px 0 0; -moz-border-radius: 8px 8px 0 0; -webkit-border-radius: 8px 8px 0 0;behavior: url(<?php echo get_template_directory_uri(); ?>/images/PIE.htc);}
-#zn_slider, #topmenu ul li ul{border-radius: 0 0 8px 8px; -moz-border-radius: 0 0 8px 8px; -webkit-border-radius: 0 0 8px 8px;behavior: url(<?php echo get_template_directory_uri(); ?>/images/PIE.htc);}
-#topmenu, .midrow_blocks, #footer, #copyright, .lay1 .hentry, .single_post, #sidebar .widgets .widget, .commentlist .depth-1, #commentform, .comment-form-comment textarea, .form-submit input, #searchsubmit, #related_wrap ul, .znn_paginate span, .znn_paginate a, .navigation a, .navigation span, .lay2, .lay3 .post_image, .lay3 .post_content, .comment-form-author input, .comment-form-email input, .comment-form-url input, .commentlist li ul li .comment-body{border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;behavior: url(<?php echo get_template_directory_uri(); ?>/images/PIE.htc);}
-#commentform label{border-radius: 8px 0 0 8px; -moz-border-radius: 8px 0 0 8px; -webkit-border-radius: 8px 0 0 8px;behavior: url(<?php echo get_template_directory_uri(); ?>/images/PIE.htc);}
-
-</style>
-<?php } ?>
-
-<?php if(of_get_option('skewed_checkbox') == "0"){ ?>
-<style type="text/css">
-.skew_bottom_big, .skew_bottom_right, .skew_top_big, .skew_top_right, .single_skew, .single_skew .skew_bottom_big, .single_skew .skew_bottom_right, .depth-1 .single_skew, .single_skew_comm, .single_skew_comm .skew_top_big, .single_skew_comm .skew_top_right, #respond_wrap .single_skew, #respond_wrap .single_skew_comm{display:none!important;}
-.commentlist .depth-1{ margin-top:10px;}
-.midrow_blocks{ margin-top:30px;}
-.commentlist li{border-bottom:1px solid #ececec; border-top:1px solid #ececec;}
-</style>
-<?php } else { ?>
-
-<?php } ?>
-
-<?php }
-
-add_action( 'wp_head', 'znn_customstyle' );
 
 
 function znn_mobile_css() {
@@ -336,51 +290,6 @@ $GLOBALS['comment'] = $comment; ?>
 
 
 <?php }
-
-//Add Custom Slider Post
-add_action('init', 'znn_slider_register');
-
-function znn_slider_register() {
-
-  $labels = array(
-    'name' => __('Slider', 'zenon'),
-    'singular_name' => __('Slider Item', 'zenon'),
-    'add_new' => __('Add New', 'zenon'),
-    'add_new_item' => __('Add New Slide', 'zenon'),
-    'edit_item' => __('Edit Slides', 'zenon'),
-    'new_item' => __('New Slider', 'zenon'),
-    'view_item' => __('View Sliders', 'zenon'),
-    'search_items' => __('Search Sliders', 'zenon'),
-    'menu_icon' => get_stylesheet_directory_uri() . 'images/article16.png',
-    'not_found' =>  __('Nothing found', 'zenon'),
-    'not_found_in_trash' => __('Nothing found in Trash', 'zenon'),
-    'parent_item_colon' => ''
-  );
-
-  $args = array(
-    'labels' => $labels,
-    'public' => true,
-    'exclude_from_search' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true,
-    'query_var' => true,
-    'menu_icon' => get_stylesheet_directory_uri() . '/images/slides.png',
-    'rewrite' => false,
-    'capability_type' => 'post',
-    'hierarchical' => false,
-    'menu_position' => null,
-    'supports' => array('title','excerpt','thumbnail'),
-    'register_meta_box_cb' => 'znn_add_meta'
-    );
-
-  register_post_type( 'slider' , $args );
-}
-//Slider Link Meta Box
-add_action("admin_init", "znn_add_meta");
-
-function znn_add_meta(){
-  add_meta_box("znn_credits_meta", "Link", "znn_credits_meta", "slider", "normal", "low");
-}
 
 
 function znn_credits_meta( $post ) {
