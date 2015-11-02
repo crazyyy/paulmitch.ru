@@ -1,15 +1,64 @@
-<?php get_header(); ?>
+<?php /* Template Name: Home Page */ get_header(); ?>
 
 <!--SLIDER END-->
 
 <div class="slider_wrap">
-<div id="zn_slider">
-  <?php get_template_part(''.$zn_slides = of_get_option('slider_select', 'easyslider').''); ?>
-</div>
-<div class="skew_bottom_big"></div>
-<div class="skew_bottom_right"></div>
+    <div id="zn_slider">
+      <?php get_template_part(''.$zn_slides = of_get_option('slider_select', 'easyslider').''); ?>
+    </div>
+    <div class="skew_bottom_big"></div>
+    <div class="skew_bottom_right"></div>
 </div>
 <!--SLIDER END-->
+
+<hr>
+<?php the_field("test"); ?>
+
+
+<?php
+echo "<hr>
+<hr><br><br>";
+$terms = get_field('taxonomys');
+
+if( $terms ): ?>
+
+    <ul>
+
+    <?php foreach( $terms as $term ): ?>
+
+        <h2><?php echo $term->name; ?></h2>
+        <p><?php echo $term->description; ?></p>
+        <a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+    <?php endforeach; ?>
+
+    </ul>
+
+
+
+<?php endif;
+
+echo " <br>
+<hr>";?>
+
+<?php
+
+$term = get_field('taxonomys');
+
+if( $term ): ?>
+
+    <h2><?php echo $term->name; ?></h2>
+    <p><?php echo $term->description; ?></p>
+
+<?php endif;
+echo "<hr><br><br>
+<hr>";
+
+?>
+
+
+
+
 
 <!--LATEST POSTS-->
 <?php if ( is_home() ) { ?>
