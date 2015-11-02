@@ -1,21 +1,27 @@
+<?php if( have_rows('slider') ): ?>
 <div id="slider" class="easyslider">
   <ul>
-  <?php query_posts( array( 'post_type' => 'slider', 'posts_per_page' => '10' ) ); ?>
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php while( have_rows('slider') ): the_row();
+
+    // vars
+    $image = get_sub_field('image');
+    $title = get_sub_field('title');
+    $content = get_sub_field('description');
+    $link = get_sub_field('link');
+
+    ?>
 
     <li>
-      <?php $znndata = get_post_meta($post->ID, 'znn_slide_link', TRUE); ?>
-
-      <?php if(of_get_option('sldrtxt_checkbox') == "1"){ ?>
-        <div class="slider-content">
-          <?php the_title( '<h2 class="entry-title"><a href="' . $znndata . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-          <?php the_excerpt(); ?>
-        </div>
-      <?php } ?>
-
-      <a href="<?php echo $znndata; ?>"><?php the_post_thumbnail(); ?></a>
+      <div class="slider-content">
+        <h2 class="entry-title">
+          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>" rel="bookmark"><?php echo $title; ?></a>
+        </h2>
+        <p><?php echo $content; ?></p>
+      </div><!-- slider-content -->
+      <a href="<?php echo $link; ?>"><img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" /></a>
     </li>
 
-  <?php endwhile; endif; ?>
+  <?php endwhile; ?>
   </ul>
-</div>
+</div><!-- slider -->
+<?php endif; ?>

@@ -1,6 +1,12 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
-
+<div class="slider_wrap">
+  <div id="zn_slider">
+    <?php get_template_part(''.$zn_slides = of_get_option('slider_select', 'easyslider').''); ?>
+  </div>
+  <div class="skew_bottom_big"></div>
+  <div class="skew_bottom_right"></div>
+</div>
 
 
 <?php $terms = get_field('taxonomys'); if( $terms ): ?>
