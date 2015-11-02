@@ -1,0 +1,63 @@
+;
+ALTER TABLE `ec_subscription` ADD `quantity` INTEGER(11) NOT NULL DEFAULT '1' COMMENT 'Quantity for the subscription ordered.';
+CREATE TABLE IF NOT EXISTS `ec_tempcart_data` (
+  `tempcart_data_id` int(11) NOT NULL AUTO_INCREMENT,
+  `session_id` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `user_id` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `email` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `username` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `first_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `last_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `coupon_code` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `giftcard` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_first_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_last_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_company_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_address_line_1` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_address_line_2` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_city` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_state` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_zip` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_country` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `billing_phone` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_selector` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_first_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_last_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_company_name` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_address_line_2` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_address_line_1` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_city` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_state` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_zip` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_country` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `shipping_phone` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `create_account` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `order_notes` TEXT COLLATE utf8_general_ci,
+  `shipping_method` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `estimate_shipping_zip` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `expedited_shipping` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `estimate_shipping_country` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `is_guest` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `guest_key` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `subscription_option1` TEXT COLLATE utf8_general_ci,
+  `subscription_option2` TEXT COLLATE utf8_general_ci,
+  `subscription_option3` TEXT COLLATE utf8_general_ci,
+  `subscription_option4` TEXT COLLATE utf8_general_ci,
+  `subscription_option5` TEXT COLLATE utf8_general_ci,
+  `subscription_advanced_option` TEXT COLLATE utf8_general_ci,
+  `subscription_quantity` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `convert_to` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `translate_to` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `taxcloud_tax_amount` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  `perpage` VARCHAR(512) COLLATE utf8_general_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`tempcart_data_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE 'utf8_general_ci' PACK_KEYS=0
+;
+CREATE TABLE IF NOT EXISTS `ec_live_rate_cache` (
+  `live_rate_cache_id` INTEGER(11) NOT NULL AUTO_INCREMENT COMMENT 'The unique identifier for this table.',
+  `ec_cart_id` varchar(256) COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'Relates a set of live rates to a particular cart',
+  `rate_data` text COLLATE utf8_general_ci COMMENT 'Contains JSON data for the customer shopping cart.',
+  PRIMARY KEY (`live_rate_cache_id`)
+) ENGINE=MyISAM 
+AUTO_INCREMENT=13 CHARACTER SET 'utf8' COLLATE 'utf8_general_ci'
+;
