@@ -9,7 +9,7 @@
   <div class="single_wrap">
 
     <div class="single_post">
-    <?php if(have_posts()): ?><?php while(have_posts()): ?><?php the_post(); ?>
+    <?php if(have_posts()): while(have_posts()): the_post(); ?>
 
       <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
         <div class="post_content">
@@ -29,7 +29,9 @@
           <div class="post_cat">
             <?php _e('Серия' , 'zenon'); ?> : <div class="catag_list"><?php the_category(', '); ?></div>
           </div>
-
+          <?php
+            $measure = get_field('measure');
+          ?>
 
           <?php if( have_rows('catalog') ): ?>
           <ul class="list-var">
@@ -37,7 +39,7 @@
             $size = get_sub_field('weight');
             $price = get_sub_field('price');
           ?>
-            <li><span class="size"><?php echo $size; ?><?php the_field('measure'); ?></span> - <span class="price"><?php echo $price; ?></span> <i class="fa fa-rub"></i>  <a href="javascript:;" onclick="simpleCart.add({name:'<?php the_title(); ?>',size:'<?php echo $size; ?>',price: <?php echo $price; ?>,thumb:'<?php echo $imgurl; ?>'});" >В корзину</a></li>
+            <li><span class="size"><?php echo $size; ?><?php echo $measure; ?></span> - <span class="price"><?php echo $price; ?></span> <i class="fa fa-rub"></i>  <a href="javascript:;" onclick="simpleCart.add({name:'<?php the_title(); ?> <?php echo $size; ?><?php echo $measure; ?>',size:'<?php echo $size; ?>',price: <?php echo $price; ?>,thumb:'<?php echo $imgurl; ?>'});" >В корзину</a></li>
 
           <?php endwhile; ?>
           </ul>

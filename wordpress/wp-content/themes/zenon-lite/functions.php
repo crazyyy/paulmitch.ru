@@ -155,17 +155,16 @@ jQuery('.znn_paginate a').each(function(){
     <?php }
 
 //Zenon get the first image of the post Function
-function znn_get_images($overrides = '', $exclude_thumbnail = false)
-{
-    return get_posts(wp_parse_args($overrides, array(
-        'numberposts' => -1,
-        'post_parent' => get_the_ID(),
-        'post_type' => 'attachment',
-        'post_mime_type' => 'image',
-        'order' => 'ASC',
-        'exclude' => $exclude_thumbnail ? array(get_post_thumbnail_id()) : array(),
-        'orderby' => 'menu_order ID'
-    )));
+function znn_get_images($overrides = '', $exclude_thumbnail = false) {
+  return get_posts(wp_parse_args($overrides, array(
+      'numberposts' => -1,
+      'post_parent' => get_the_ID(),
+      'post_type' => 'attachment',
+      'post_mime_type' => 'image',
+      'order' => 'ASC',
+      'exclude' => $exclude_thumbnail ? array(get_post_thumbnail_id()) : array(),
+      'orderby' => 'menu_order ID'
+  )));
 }
 
 

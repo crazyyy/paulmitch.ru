@@ -1,10 +1,25 @@
-!function() {
-    for (var e, t = function() {}
-    , a = ["assert", "clear", "count", "debug", "dir", "dirxml", "error", "exception", "group", "groupCollapsed", "groupEnd", "info", "log", "markTimeline", "profile", "profileEnd", "table", "time", "timeEnd", "timeline", "timelineEnd", "timeStamp", "trace", "warn"], r = a.length, l = window.console = window.console || {}; r--; )
-        e = a[r],
-        l[e] || (l[e] = t)
+// Avoid `console` errors in browsers that lack a console.
+(function () {
+  var method;
+  var noop = function () {};
+  var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'];
+  var length = methods.length;
+  var console = (window.console = window.console || {});
+
+  while (length--) {
+    method = methods[length];
+
+    // Only stub undefined methods.
+    if (!console[method]) {
+        console[method] = noop;
+    }
 }
-(),
+}());
+
+// Place any jQuery/helper plugins in here.
+//
+var widgetsCart = document.getElementById("widgets-cart");
+
 simpleCart.currency({
     code: "RUB",
     name: "рубли",
@@ -45,6 +60,10 @@ simpleCart({
 }),
 simpleCart.bind("update", function() {
     var e = simpleCart.grandTotal();
-    e > 0 ? console.log("Whoa, the cart total is now at " + simpleCart.toCurrency(simpleCart.grandTotal()) + "! Nice!") : console.log("nothing")
-}
+    if ( e > 0 ) {
+      widgetsCart.style.display = "block";
+    } else {
+      widgetsCart.style.display = "none";
+    }
+  }
 );

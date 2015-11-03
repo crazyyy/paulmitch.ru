@@ -1,5 +1,5 @@
 <div id="sidebar">
-  <div class="widgets widgets-cart">
+  <div id="widgets-cart" class="widgets widgets-cart">
 
     <h3 class="widgettitle widgettitle-price">В корзине <span id="simpleCart_quantity" class="simpleCart_quantity"></span> товаров <br>на сумму <span class="simpleCart_total"></span></h3>
 
