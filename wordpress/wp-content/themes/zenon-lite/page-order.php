@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /* Template Name: Order Page */ get_header(); ?>
 
 <!--Content-->
 <div id="content">
@@ -10,6 +10,7 @@
         <div class="post_content">
           <h2 class="postitle"><?php the_title(); ?></h2>
           <?php the_content(); ?>
+
           <div style="clear:both"></div>
           <?php wp_link_pages('<p class="pages"><strong>'.__('Pages:').'</strong> ', '</p>', 'number'); ?>
           <div class="edit"><?php edit_post_link(); ?></div>

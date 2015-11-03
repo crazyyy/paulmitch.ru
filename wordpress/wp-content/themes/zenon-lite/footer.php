@@ -26,9 +26,31 @@
 
   <?php wp_footer(); ?>
 
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/simplecart.min.js"></script>
+<script>
 
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
+  $(document).ready(function() {
+
+    var postData = <?php echo json_encode($_POST) ?>;
+console.log(postData);
+    if ( postData.itemCount > 0 ) {
+      var htmlForm = '';
+      for ( i = 0 ; i < postData.itemCount ; i++ ) {
+        num = i + 1;
+
+        itemDatas = 'Позиция: ' + postData['item_name_' + num] + '\r\nЦена: ' + postData['item_price_' + num] + '\r\nКоличество: ' + postData['item_quantity_' + num] + '\r\n------\r\n';
+        htmlForm +=  itemDatas;
+      }
+
+      console.log(htmlForm);
+    }
+
+
+    $('#your-message').val(htmlForm);
+
+
+  });
+
+</script>
 
 
 </body>
