@@ -10,7 +10,12 @@
   <link href='http://fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
-  <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/selectivizr.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/respond.js"></script>
+  <![endif]-->
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
