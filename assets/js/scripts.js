@@ -3402,7 +3402,7 @@ simpleCart.bind("update", function() {
 simpleCart({
   checkout: {
     type: "SendForm" ,
-    url: "http://paulmitch.dev/forma-zakaza/",
+    url: "http://paulmitch.ru/forma-zakaza/",
     method: "POST"
   }
 });
