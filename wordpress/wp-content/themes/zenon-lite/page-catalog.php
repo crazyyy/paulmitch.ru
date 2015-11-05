@@ -1,96 +1,35 @@
-<?php /* Template Name: Home Page */ get_header(); ?>
+<?php /* Template Name: Catalogue Page */ get_header(); ?>
 
-<div class="slider_wrap">
-  <div id="zn_slider">
-    <?php get_template_part(''.$zn_slides = of_get_option('slider_select', 'easyslider').''); ?>
-  </div>
-  <div class="skew_bottom_big"></div>
-  <div class="skew_bottom_right"></div>
-</div>
 
 <div class="lay1">
   <div class="lay1_wrap">
 
     <?php while( have_rows('quad') ): the_row();
 
-
-    if( get_field('pageornot') ) {
-
-      $slug = get_sub_field('page-slug');
-
-      $post_id = url_to_postid( $slug );
-      $link = get_sub_field('page-slug');
-      $title = get_post_field( 'post_title', $post_id );
-      $image = wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
-      $content = get_post_field( 'post_content', $post_id );
- ?>
-
-      <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-        <div class="post_content">
-          <h2 class="postitle"><a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a></h2>
-
-          <div class="post_image">
-            <!--CALL TO POST IMAGE-->
-            <a href="<?php echo $link; ?>">
-              <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-            </a>
-          </div><!-- post_image -->
-
-        <div class="znn_excerptmore">
-          <p><?php echo $content; ?></p>
-        </div><!-- /.znn_excerptmore -->
-
-        </div><!-- post_content -->
-
-      </div><!-- post_class -->
-
-<?php
-
-    };
-
-
-
-    if ( get_field('pageornot') ) {
-
       $slug = get_sub_field('slug');
-
       $idObj = get_category_by_slug( $slug );
-      $link = get_term_link( $idObj );
-      $title = $idObj->name;
-      $image = get_field('image', $idObj);
-      $content = $idObj->description;
-
- ?>
-
-      <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-        <div class="post_content">
-          <h2 class="postitle"><a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a></h2>
-
-          <div class="post_image">
-            <!--CALL TO POST IMAGE-->
-            <a href="<?php echo $link; ?>">
-              <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-            </a>
-          </div><!-- post_image -->
-
-        <div class="znn_excerptmore">
-          <p><?php echo $content; ?></p>
-        </div><!-- /.znn_excerptmore -->
-
-        </div><!-- post_content -->
-
-      </div><!-- post_class -->
-
-
-<?php
-
-
-
-    };
 
       ?>
 
+      <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+        <div class="post_content">
+          <h2 class="postitle"><a href="<?php echo get_term_link( $idObj ); ?>" title="<?php echo $idObj->name; ?>"><?php echo $idObj->name; ?></a></h2>
 
+
+        <div class="post_image">
+          <!--CALL TO POST IMAGE-->
+          <a href="<?php echo get_term_link( $idObj ); ?>">
+            <img src="<?php echo get_field('image', $idObj); ?>" alt="">
+          </a>
+        </div><!-- post_image -->
+
+        <div class="znn_excerptmore">
+          <p><?php echo $idObj->description; ?></p>
+        </div><!-- /.znn_excerptmore -->
+
+        </div><!-- post_content -->
+
+      </div><!-- post_class -->
 
     <?php endwhile; ?>
   </div><!-- lay1_wrap -->
