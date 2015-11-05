@@ -1,21 +1,10 @@
 <?php
-/**
- * Основные параметры WordPress.
- *
- * Этот файл содержит следующие параметры: настройки MySQL, префикс таблиц,
- * секретные ключи, язык WordPress и ABSPATH. Дополнительную информацию можно найти
- * на странице {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Кодекса. Настройки MySQL можно узнать у хостинг-провайдера.
- *
- * Этот файл используется сценарием создания wp-config.php в процессе установки.
- * Необязательно использовать веб-интерфейс, можно скопировать этот файл
- * с именем "wp-config.php" и заполнить значения.
- *
- * @package WordPress
- */
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
+
+//define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', 'D:\Works\Verstka\paulmitch.ru\wordpress\wp-content\plugins\wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'basmach_pm');
 
 /** Имя пользователя MySQL */
@@ -49,7 +38,7 @@ define('NONCE_KEY',        'I+5!=-V9i;C=;*Jn@1fh|&[V536!ddJkRD>4|otIfa-iAuulvBav
 define('AUTH_SALT',        'KaM/gvFZQ`%%hwJQn>V]x*.>[OJ[+)mI$(mx%K|uk3e.c8{/F8^?OdGm{9)mNEL$');
 define('SECURE_AUTH_SALT', 'awI(v+h.2GEewY?|kz~5h1Ag9qDj25-yam+fI^a/:5*_~KW7ErDjNB;i&,Qp8%,@');
 define('LOGGED_IN_SALT',   '-.Z R),tryvI6TELV 0G8ft=RhHz.wMQDQD[+,~]3@.XsKt&Q/-MEZ6V=PihFnO=');
-define('NONCE_SALT',       '6HK*|%L^a{nI-g:1-?>[*`7j$#pQN(UR8(Pw9ZCo#p~Mf>:}O6mEiF##< y|B -8');
+define('NONCE_SALT',       '6HK*|%L^a{nI-g:1-[*`7j$#pQN(UR8(Pw9ZCo#p~Mf>:}O6mEiF##< y|B -8');
 
 /**#@-*/
 
@@ -88,3 +77,5 @@ if ( !defined('ABSPATH') )
 
 /** Инициализирует переменные WordPress и подключает файлы. */
 require_once(ABSPATH . 'wp-settings.php');
+//Disable File Edits
+define('DISALLOW_FILE_EDIT', true);
