@@ -17,7 +17,7 @@
       <div id="footmenu">
         <?php wp_nav_menu( array( 'container_class' => 'menu-footer', 'theme_location' => 'footer', 'depth' => 0, 'fallback_cb' =>false) ); ?>
         <div class="sonetlink">
-          <span>Мы в соцсетях: </span><a href="http://vk.com/pmitchellsell" class="vkgroup"></a><a href="https://instagram.com/paul_mitchell_sell/" class="instgroup"></a><a href="https://www.facebook.com/pmitchellsell" class="fbgroup"></a>
+          <span>Мы в соцсетях: </span><a rel="nofollow" href="http://vk.com/pmitchellsell" class="vkgroup"></a><a rel="nofollow" href="https://instagram.com/paul_mitchell_sell/" class="instgroup"></a><a rel="nofollow" href="https://www.facebook.com/pmitchellsell" class="fbgroup"></a>
         </div><!-- sonetlink -->
       </div><!-- footmenu -->
     </div><!-- copyright -->

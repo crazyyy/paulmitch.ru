@@ -20,11 +20,11 @@
 
           <?php if ( has_post_thumbnail() ) : ?>
 
-            <a href="<?php the_permalink();?>"><?php the_post_thumbnail('medium'); ?></a>
+            <a href="<?php the_permalink();?>"><?php the_post_thumbnail('large'); ?></a>
 
           <?php elseif($photo = znn_get_images('numberposts=1', true)): ?>
 
-            <a href="<?php the_permalink();?>"><?php echo wp_get_attachment_image($photo[0]->ID ,'medium'); ?></a>
+            <a href="<?php the_permalink();?>"><?php echo wp_get_attachment_image($photo[0]->ID ,'large'); ?></a>
 
           <?php else : ?>
 

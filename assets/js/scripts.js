@@ -3350,6 +3350,8 @@ removeItem:function(e){f.load("localStorage");e=k(e);f.removeAttribute(e);f.save
 // Place any jQuery/helper plugins in here.
 //
 var widgetsCart = document.getElementById("widgets-cart");
+var formCart = document.getElementById("form-cart");
+var shoppingCart = document.getElementById("shopping-cart");
 
 simpleCart.currency({
     code: "RUB",
@@ -3393,8 +3395,12 @@ simpleCart.bind("update", function() {
     var e = simpleCart.grandTotal();
     if ( e > 0 ) {
       widgetsCart.style.display = "block";
+      shoppingCart.style.display = "block";
+      formCart.style.width = "80%";
     } else {
       widgetsCart.style.display = "none";
+      shoppingCart.style.display = "none";
+      formCart.style.width = "98%";
     }
   }
 );

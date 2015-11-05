@@ -10,7 +10,6 @@
   <link href='http://fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
-
   <!--[if lt IE 9]>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/selectivizr.js"></script>
@@ -58,7 +57,17 @@
       <div class="center">
         <div id="topmenu">
           <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-        </div>
+          <div class="search-block">
+            <form id="form-cart" method="get" name="searchform" action="<?php bloginfo('url'); ?>/">
+                <input type="text" value="" name="s" placeholder="Поиск" />
+                <button class="fa fa-search"></button>
+            </form>
+            <div id="shopping-cart" class="shopping-cart">
+              <i class="fa fa-shopping-cart"></i>: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>) <a href="javascript:;" class="simpleCart_checkout"><i class="fa-check-circle fa"></i></a>
+            </div><!-- /.shopping-cart -->
+          </div>
+          <!-- /.search-block -->
+        </div><!-- topmenu -->
       </div>
     </div>
     <!--MENU END-->
