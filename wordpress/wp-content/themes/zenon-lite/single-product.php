@@ -18,11 +18,11 @@
         <div class="product-block">
           <div class="product-img">
             <?php if ( has_post_thumbnail()) :
-              $imgurl = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
-              <img src="<?php echo $imgurl; ?>" alt="">
+              $imgurl = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+              <a href="<?php echo $imgurl; ?>" rel="lightbox"><img src="<?php echo $imgurl; ?>" alt=""></a>
               <?php
             else: ?>
-              <img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+              <a href="<?php echo catchFirstImage(); ?>" rel="lightbox"><img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" /></a>
             <?php endif; ?>
           </div><!-- product-img -->
 

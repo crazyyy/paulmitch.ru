@@ -3390,20 +3390,35 @@ simpleCart({
         text: "Удалить",
         label: !1
     }]
-}),
-simpleCart.bind("update", function() {
-    var e = simpleCart.grandTotal();
-    if ( e > 0 ) {
-      widgetsCart.style.display = "block";
-      shoppingCart.style.display = "block";
-      formCart.style.width = "80%";
-    } else {
-      widgetsCart.style.display = "none";
-      shoppingCart.style.display = "none";
-      formCart.style.width = "98%";
-    }
-  }
-);
+});
+
+if ($(widgetsCart).length > 0) {
+    simpleCart.bind("update", function() {
+        var e = simpleCart.grandTotal();
+        if ( e > 0 ) {
+        widgetsCart.style.display = "block";
+          shoppingCart.style.display = "block";
+          formCart.style.width = "80%";
+        } else {
+          widgetsCart.style.display = "none";
+          shoppingCart.style.display = "none";
+          formCart.style.width = "98%";
+        }
+      }
+    );
+} else {
+    simpleCart.bind("update", function() {
+        var e = simpleCart.grandTotal();
+        if ( e > 0 ) {
+          shoppingCart.style.display = "block";
+          formCart.style.width = "80%";
+        } else {
+          shoppingCart.style.display = "none";
+          formCart.style.width = "98%";
+        }
+      }
+    );
+};
 
 simpleCart({
   checkout: {

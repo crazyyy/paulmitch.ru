@@ -13,54 +13,26 @@
 
     <?php while( have_rows('quad') ): the_row();
 
+      if( get_sub_field( 'pageornot' ) ) {
+        $slug = get_sub_field('slug');
 
-    if( get_field('pageornot') ) {
+        $idObj = get_category_by_slug( $slug );
+        $link = get_term_link( $idObj );
+        $title = $idObj->name;
+        $image = get_field('image', $idObj);
+        $content = $idObj->description;
 
-      $slug = get_sub_field('page-slug');
+      } else {
 
-      $post_id = url_to_postid( $slug );
-      $link = get_sub_field('page-slug');
-      $title = get_post_field( 'post_title', $post_id );
-      $image = wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
-      $content = get_post_field( 'post_content', $post_id );
- ?>
+        $slug = get_sub_field('page-slug');
 
-      <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-        <div class="post_content">
-          <h2 class="postitle"><a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a></h2>
-
-          <div class="post_image">
-            <!--CALL TO POST IMAGE-->
-            <a href="<?php echo $link; ?>">
-              <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-            </a>
-          </div><!-- post_image -->
-
-        <div class="znn_excerptmore">
-          <p><?php echo $content; ?></p>
-        </div><!-- /.znn_excerptmore -->
-
-        </div><!-- post_content -->
-
-      </div><!-- post_class -->
-
-<?php
-
-    };
-
-
-
-    if ( get_field('pageornot') ) {
-
-      $slug = get_sub_field('slug');
-
-      $idObj = get_category_by_slug( $slug );
-      $link = get_term_link( $idObj );
-      $title = $idObj->name;
-      $image = get_field('image', $idObj);
-      $content = $idObj->description;
-
- ?>
+        $post_id = url_to_postid( $slug );
+        $link = get_sub_field('page-slug');
+        $title = get_post_field( 'post_title', $post_id );
+        $image = wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
+        $content = get_post_field( 'post_content', $post_id );
+      }
+    ?>
 
       <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
         <div class="post_content">
@@ -80,19 +52,9 @@
         </div><!-- post_content -->
 
       </div><!-- post_class -->
-
-
-<?php
-
-
-
-    };
-
-      ?>
-
-
 
     <?php endwhile; ?>
+
   </div><!-- lay1_wrap -->
 </div><!-- lay1 -->
 
