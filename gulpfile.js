@@ -59,7 +59,7 @@ var appFiles = {
 var spriteConfig = {
   imgName: 'sprite.png',
   cssName: '_sprite.scss',
-  imgPath: '../img/' + 'sprite.png'
+  imgPath: '../images/' + 'sprite.png'
 };
 var changeEvent = function (evt) {
   gutil.log('File', gutil.colors.cyan(evt.path.replace(new RegExp('/.*(?=/' + basePaths.src + ')/'), '')), 'was', gutil.colors.magenta(evt.type));

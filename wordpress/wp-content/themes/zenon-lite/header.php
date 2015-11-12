@@ -22,25 +22,18 @@
 <div class="social_wrap">
   <div class="social">
     <ul>
-      <?php if ( of_get_option('fbsoc_text') ) { ?>
-      <li class="soc_fb"><a title="Facebook" target="_blank" href="<?php echo of_get_option('fbsoc_text'); ?>">Facebook</a></li><?php } ?>
-      <?php if ( of_get_option('ttsoc_text') ) { ?>
-      <li class="soc_tw"><a title="Twitter" target="_blank" href="<?php echo of_get_option('ttsoc_text'); ?>">Twitter</a></li><?php } ?>
-      <?php if ( of_get_option('gpsoc_text') ) { ?>
-      <li class="soc_plus"><a title="Google Plus" target="_blank" href="<?php echo of_get_option('gpsoc_text'); ?>">Google Plus</a></li><?php } ?>
-      <?php if ( of_get_option('ytbsoc_text') ) { ?>
-      <li class="soc_ytb"><a title="Youtube" target="_blank" href="<?php echo of_get_option('ytbsoc_text'); ?>">Youtube</a></li><?php } ?>
-      <?php if ( of_get_option('flkrsoc_text') ) { ?>
-      <li class="soc_flkr"><a title="Flickr" target="_blank" href="<?php echo of_get_option('flkrsoc_text'); ?>">Flickr</a></li><?php } ?>
-      <?php if ( of_get_option('lnkdsoc_text') ) { ?>
-      <li class="soc_lnkd"><a title="Linkedin" target="_blank" href="<?php echo of_get_option('lnkdsoc_text'); ?>">Linkedin</a></li><?php } ?>
-      <?php if ( of_get_option('pinsoc_text') ) { ?>
-      <li class="soc_pin"><a title="Pinterest" target="_blank" href="<?php echo of_get_option('pinsoc_text'); ?>">Pinterest</a></li><?php } ?>
-      <?php if ( of_get_option('rsssoc_text') ) { ?>
-      <li class="soc_rss"><a title="Rss Feed" target="_blank" href="<?php echo of_get_option('rsssoc_text'); ?>">RSS</a></li><?php } ?>
+      <li class="soc_vk">
+        <a title="Vkontakte" rel="nofollow" target="_blank" href="http://vk.com/pmitchellsell">Vkontakte</a>
+      </li>
+      <li class="soc_fb">
+        <a title="Facebook" target="_blank" rel="nofollow" href="https://www.facebook.com/pmitchellsell">Facebook</a>
+      </li>
+      <li class="soc_inst">
+        <a title="Instagram" target="_blank" rel="nofollow" href="https://www.instagram.com/paul_mitchell_sell/">Instagram</a>
+      </li>
     </ul>
   </div>
-</div>
+</div><!-- social_wrap -->
 
 <div class="center">
   <!--HEADER START-->

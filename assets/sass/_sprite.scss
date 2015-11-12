@@ -11,22 +11,44 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-$sprite-logo-name: 'sprite-logo';
-$sprite-logo-x: 0px;
-$sprite-logo-y: 0px;
-$sprite-logo-offset-x: 0px;
-$sprite-logo-offset-y: 0px;
-$sprite-logo-width: 512px;
-$sprite-logo-height: 512px;
-$sprite-logo-total-width: 512px;
-$sprite-logo-total-height: 512px;
-$sprite-logo-image: '../img/sprite.png';
-$sprite-logo: (0px, 0px, 0px, 0px, 512px, 512px, 512px, 512px, '../img/sprite.png', 'sprite-logo', );
-$spritesheet-width: 512px;
-$spritesheet-height: 512px;
-$spritesheet-image: '../img/sprite.png';
-$spritesheet-sprites: ($sprite-logo, );
-$spritesheet: (512px, 512px, '../img/sprite.png', $spritesheet-sprites, );
+$sprite-ico-fb-name: 'sprite-ico-fb';
+$sprite-ico-fb-x: 0px;
+$sprite-ico-fb-y: 0px;
+$sprite-ico-fb-offset-x: 0px;
+$sprite-ico-fb-offset-y: 0px;
+$sprite-ico-fb-width: 50px;
+$sprite-ico-fb-height: 50px;
+$sprite-ico-fb-total-width: 100px;
+$sprite-ico-fb-total-height: 100px;
+$sprite-ico-fb-image: '../images/sprite.png';
+$sprite-ico-fb: (0px, 0px, 0px, 0px, 50px, 50px, 100px, 100px, '../images/sprite.png', 'sprite-ico-fb', );
+$sprite-ico-inst-name: 'sprite-ico-inst';
+$sprite-ico-inst-x: 50px;
+$sprite-ico-inst-y: 0px;
+$sprite-ico-inst-offset-x: -50px;
+$sprite-ico-inst-offset-y: 0px;
+$sprite-ico-inst-width: 50px;
+$sprite-ico-inst-height: 50px;
+$sprite-ico-inst-total-width: 100px;
+$sprite-ico-inst-total-height: 100px;
+$sprite-ico-inst-image: '../images/sprite.png';
+$sprite-ico-inst: (50px, 0px, -50px, 0px, 50px, 50px, 100px, 100px, '../images/sprite.png', 'sprite-ico-inst', );
+$sprite-ico-vk-name: 'sprite-ico-vk';
+$sprite-ico-vk-x: 0px;
+$sprite-ico-vk-y: 50px;
+$sprite-ico-vk-offset-x: 0px;
+$sprite-ico-vk-offset-y: -50px;
+$sprite-ico-vk-width: 50px;
+$sprite-ico-vk-height: 50px;
+$sprite-ico-vk-total-width: 100px;
+$sprite-ico-vk-total-height: 100px;
+$sprite-ico-vk-image: '../images/sprite.png';
+$sprite-ico-vk: (0px, 50px, 0px, -50px, 50px, 50px, 100px, 100px, '../images/sprite.png', 'sprite-ico-vk', );
+$spritesheet-width: 100px;
+$spritesheet-height: 100px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($sprite-ico-fb, $sprite-ico-inst, $sprite-ico-vk, );
+$spritesheet: (100px, 100px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

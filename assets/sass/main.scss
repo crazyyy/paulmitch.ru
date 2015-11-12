@@ -2331,48 +2331,41 @@ h3#reply-title {
   left: 0;
 }
 
-.social ul {
-  margin: 0;
-  padding: 0;
-  li {
-    list-style-type: none;
-
-    opacity: .3;
-    a {
+.social {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
       display: block;
 
-      width: 35px;
+      width: 50px;
       height: 50px;
-      margin-top: -19px;
+      margin: 0 0 5px;
 
-      text-indent: -999999px;
+      list-style-type: none;
 
-      background: url(../images/social.png) no-repeat;
+      opacity: .3;
+      a {
+        display: block;
+
+        text-indent: -999999px;
+      }
     }
-  }
-  .soc_fb a {
-    background-position: 0 0;
-  }
-  .soc_tw a {
-    background-position: 0 -51px;
-  }
-  .soc_plus a {
-    background-position: 0 -102px;
-  }
-  .soc_ytb a {
-    background-position: 0 -151px;
-  }
-  .soc_flkr a {
-    background-position: 0 -350px;
-  }
-  .soc_lnkd a {
-    background-position: 0 -201px;
-  }
-  .soc_pin a {
-    background-position: 0 -251px;
-  }
-  .soc_rss a {
-    background-position: 0 -301px;
+    .soc_vk {
+      a {
+        @include sprite($sprite-ico-vk);
+      }
+    }
+    .soc_fb {
+      a {
+        @include sprite($sprite-ico-fb);
+      }
+    }
+    .soc_inst {
+      a {
+        @include sprite($sprite-ico-inst);
+      }
+    }
   }
 }
 

@@ -9,6 +9,7 @@
       <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
         <div class="post_content">
           <h2 class="postitle"><?php the_title(); ?></h2>
+          dasdada
           <?php the_content(); ?>
           <div style="clear:both"></div>
           <?php wp_link_pages('<p class="pages"><strong>'.__('Pages:').'</strong> ', '</p>', 'number'); ?>
